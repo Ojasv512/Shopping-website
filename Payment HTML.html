@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>
+
+            Complete Your Purchase
+
+        </title>
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="Payment CSS.css">
+        
+        <link rel="shortcut icon" type="image/jpg" href="C:\Users\hp\Desktop\College\First Semester\Introduction To Web Technologies\Notepad ++ Files\Project\favicon.ico"/>
+
+    </head>
+
+    <body>
+
+    <div class="container">
+
+        <div class="card-container">
+
+            <div class="front">
+
+                <div class="image">
+
+                    <img src="data:image/jpeg;base64,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" alt = "chip">
+
+                    <img src="data:image/png;base64,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" alt = 'visa'>
+
+                </div>
+
+                <div class="card-number-box">
+                    
+                    ################
+                
+                </div>
+
+                <div class="flexbox">
+
+                    <div class="box">
+
+                        <div class="card-holder-name">
+                            
+                            Name of card holder
+                    
+                        </div>
+
+                    </div>
+
+                    <div class="box">
+
+                        <span>
+                            
+                            expiry
+                        
+                        </span>
+
+                        <div class="expiration">
+
+                            <span class="exp-month">
+                                
+                                mm / 
+                            
+                            </span>
+
+                            <span class="exp-year">
+                                
+                                yyyy
+                            
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+            <div class="back">
+
+                <div class="stripe"> </div>
+
+                <div class="box">
+
+                    <span>
+                        
+                        cvv
+                    
+                    </span>
+
+                    <div class="cvv-box"> </div>
+
+                    <img src="https://i.imgur.com/HDMROff.png" alt = "Visa">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <form action="">
+
+            <div class="inputBox">
+
+                <span>
+                    
+                    card number
+                
+                </span>
+
+                <input type="text" maxlength="16" class="card-number-input" required>
+
+            </div>
+
+            <div class="inputBox">
+
+                <span>
+                    
+                    name on card
+                
+                </span>
+
+                <input type="text" class="card-holder-input" required>
+
+            </div>
+
+            <div class="flexbox">
+
+                <div class="inputBox">
+
+                    <span>
+                        
+                        expiry mm
+                    
+                    </span>
+
+                    <select name="" id="" class="month-input" required>
+
+                        <option value="month" selected disabled>
+                            
+                            month
+                        
+                        </option>
+
+                        <option value="01">
+                            
+                            01
+                        
+                        </option>
+
+                        <option value="02">
+                            
+                            02
+                        
+                        </option>
+
+                        <option value="03">
+                            
+                            03
+                        
+                        </option>
+
+                        <option value="04">
+                            
+                            04
+                        
+                        </option>
+
+                        <option value="05">
+                            
+                            05
+                        
+                        </option>
+
+                        <option value="06">
+                            
+                            06
+                        
+                        </option>
+
+                        <option value="07">
+                            
+                            07
+                        
+                        </option>
+
+                        <option value="08">
+                            
+                            08
+                        
+                        </option>
+
+                        <option value="09">
+                            
+                            09
+                        
+                        </option>
+
+                        <option value="10">
+                            
+                            10
+                        
+                        </option>
+
+                        <option value="11">
+                            
+                            11
+                        
+                        </option>
+
+                        <option value="12">
+                            
+                            12
+                        
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="inputBox">
+
+                    <span>
+                        
+                        expiry yy
+                    
+                    </span>
+
+                    <select name="" id="" class="year-input" required>
+
+                        <option value="year" selected disabled>
+                            
+                            year
+                        
+                        </option>
+
+                        <option value="2022">
+                            
+                            2022
+                        
+                        </option>
+
+                        <option value="2023">
+                            
+                            2023
+                        
+                        </option>
+
+                        <option value="2024">
+                            
+                            2024
+                        
+                        </option>
+                        
+                        <option value="2025">
+                            
+                            2025
+                        
+                        </option>
+                        
+                        <option value="2026">
+                            
+                            2026
+                        
+                        </option>
+                        
+                        <option value="2027">
+                            
+                            2027
+                        
+                        </option>
+                        
+                        <option value="2028">
+                            
+                            2028
+                        
+                        </option>
+                        
+                        <option value="2029">
+                            
+                            2029
+                        
+                        </option>
+                        
+                        <option value="2030">
+                            
+                            2030
+                        
+                        </option>
+                        
+                        <option value="2031">
+                            
+                            2031
+                        
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="inputBox">
+
+                    <span>
+                        
+                        cvv
+                    
+                    </span>
+
+                    <input type="text" maxlength="4" class="cvv-input" required>
+
+                </div>
+
+            </div>
+
+            <button type="button" class="submit-btn">
+
+                <a href = 'Payment Confirmation HTML and CSS.html' style = 'color: white; text-decoration: none;'>
+                    
+                    Submit
+
+                </a>
+            
+            </button>
+            
+        </form>
+
+    </div>
+    
+    <script src = 'Payment JS.js'> </script>
+
+    </body>
+
+</html>
