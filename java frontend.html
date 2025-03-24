@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #f2f2f2;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body ng-app="groceryApp" ng-controller="GroceryController">
+
+    <h1>Grocery Shopping List</h1>
+    <input type="text" ng-model="searchText" ng-change="search()" placeholder="Search for groceries..." />
+
+    <ul>
+        <li ng-repeat="item in groceryItems">
+            {{ item.name }} - ${{ item.price | number:2 }}
+        </li>
+    </ul>
+
+    <script>
+        angular.module('groceryApp', [])
+        .controller('GroceryController', function($scope, $http) {
+            $scope.groceryItems = [];
+
+            // Function to fetch grocery items from the backend
+            $scope.search = function() {
+                const query = $scope.searchText || '';
+                $http.get(`http://localhost:3000/api/groceries?q=${query}`)
+                    .then(function(response) {
+                        $scope.groceryItems = response.data;
+                    })
+                    .catch(function(error) {
+                        console.error('Error fetching groceries:', error);
+                    });
+            };
+
+            // Fetch all items initially
+            $scope.search();
+        });
+    </script>
+
+</body>
+</html>
